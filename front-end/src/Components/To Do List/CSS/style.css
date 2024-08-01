@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+
+}
+
+body{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-image: linear-gradient(to right, #f12711, blue);
+    color: white;
+
+}
+
+.container{
+    border: 1px solid black;
+    width: 95%;
+    margin: auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 25px 0;
+}
+
+.nav h2{
+    font-size: 2rem;
+    margin-left: 20px;
+
+}
+
+.user-input{
+    border: 1px solid black;
+    width: 350px;
+    text-align: center;
+}
+
+.user-input input{
+    width: 80%;
+    padding: 8px;
+    font-size: 1.2rem;
+    border: 1px solid lightgray;
+    outline: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.user-input input:focus{
+    box-shadow: 0 0 5px blueviolet;
+    border: 1px solid blueviolet;
+}
+
+.user-input button{
+    cursor: pointer;
+    padding: 8px;
+    width: fit-content;
+    transition: 1s;
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.user-input button:hover{
+    background-color: transparent;
+    color: white;
+}
+
+.to-do.items{
+    width: 500px;
+    margin: auto;
+
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    padding: 16px;
+    color: #454545;
+    margin-top: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
+}
+
+.item:hover{
+    box-shadow: 0 0 20px #e22865;
+    border: 1px solid #e22865;
+}
+
+.item i{
+    cursor: pointer;
+    color: #e22865;
+}
