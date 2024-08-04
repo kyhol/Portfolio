@@ -1,0 +1,20 @@
+.App {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+}
+
+.navbar {
+  width: 250px; /* Width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  top: 0; /* Stay at the top */
+  left: 0; /* Positioned to the left */
+  height: 100vh; /* Full height */
+}
+
+.main-content {
+  flex: 1; /* Take up the remaining space */
+  margin-left: 250px; /* Ensure space for the navbar */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}

@@ -1,4 +1,12 @@
 import React, { useState } from "react";
+import {
+  FaSun,
+  FaCloud,
+  FaCloudRain,
+  FaSnowflake,
+  FaSmog,
+  FaBolt,
+} from "react-icons/fa";
 import "./WeatherApp.css";
 
 const apiKey = "208453afc2cb0125c067d36800932307";
@@ -34,24 +42,24 @@ const WeatherApp = () => {
     return await response.json();
   };
 
-  const getWeatherEmoji = (weatherId) => {
+  const getWeatherIcon = (weatherId) => {
     switch (true) {
       case weatherId >= 200 && weatherId <= 300:
-        return "⛈️";
+        return <FaBolt />;
       case weatherId >= 300 && weatherId <= 500:
-        return "🌧️";
+        return <FaCloudRain />;
       case weatherId >= 500 && weatherId <= 600:
-        return "🌧️";
+        return <FaCloudRain />;
       case weatherId >= 600 && weatherId <= 700:
-        return "❄️";
+        return <FaSnowflake />;
       case weatherId >= 700 && weatherId <= 800:
-        return "🌫️";
+        return <FaSmog />;
       case weatherId === 800:
-        return "☀️";
+        return <FaSun />;
       case weatherId > 800 && weatherId <= 810:
-        return "☁️";
+        return <FaCloud />;
       default:
-        return "🌞";
+        return <FaSun />;
     }
   };
 
@@ -79,7 +87,7 @@ const WeatherApp = () => {
           </p>
           <p className="descDisplay">{weatherData.weather[0].description}</p>
           <p className="weatherEmoji">
-            {getWeatherEmoji(weatherData.weather[0].id)}
+            {getWeatherIcon(weatherData.weather[0].id)}
           </p>
         </div>
       )}

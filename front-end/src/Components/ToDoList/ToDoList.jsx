@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaCheckSquare, FaTrash, FaClipboardCheck } from "react-icons/fa";
 import "./ToDoList.css";
 
 const TodoList = () => {
@@ -38,7 +39,7 @@ const TodoList = () => {
     <div className="container">
       <div className="nav">
         <h2>
-          <i className="fa-solid fa-clipboard-check"></i> To-Do List
+          <FaClipboardCheck /> To-Do List
         </h2>
         <div className="user-input">
           <input
@@ -61,13 +62,14 @@ const TodoList = () => {
               {item.text}
             </div>
             <div>
-              <i
-                className={`fas fa-check-square ${
-                  item.completed ? "completed" : ""
-                }`}
+              <FaCheckSquare
+                className={`check-icon ${item.completed ? "completed" : ""}`}
                 onClick={() => toggleItemCompletion(index)}
-              ></i>
-              <i className="fas fa-trash" onClick={() => removeItem(index)}></i>
+              />
+              <FaTrash
+                className="trash-icon"
+                onClick={() => removeItem(index)}
+              />
             </div>
           </div>
         ))}

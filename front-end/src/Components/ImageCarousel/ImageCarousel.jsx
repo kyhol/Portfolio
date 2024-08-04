@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./ImageCarousel.css";
-import { FaCaretLeft, FaCaretRight } from "react-icons/fa"; // Use react-icons for the icons
+import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
 
 import img0 from "./Photos/Lam0.jpg";
 import img1 from "./Photos/Lam1.jpg";
@@ -37,15 +37,15 @@ const Carousel = () => {
         ))}
         <FaCaretLeft id="prev" onClick={() => showImage(-1)} />
         <FaCaretRight id="next" onClick={() => showImage(1)} />
-      </div>
-      <div className="dots">
-        {images.map((_, i) => (
-          <span
-            key={i}
-            className={`dot ${i === index ? "active" : ""}`}
-            onClick={() => setIndex(i)}
-          ></span>
-        ))}
+        <div className="dots">
+          {images.map((_, i) => (
+            <span
+              key={i}
+              className={`dot ${i === index ? "active" : ""}`}
+              onClick={() => setIndex(i)}
+            ></span>
+          ))}
+        </div>
       </div>
     </div>
   );

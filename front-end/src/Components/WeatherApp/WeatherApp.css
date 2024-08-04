@@ -1,26 +1,33 @@
 .weatherForm {
-  margin: 20px;
+  margin: 20px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
 }
 
 .cityInput {
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid hsl(0, 0%, 20% 0.3);
-  font-size: 2rem;
-  margin: 10px;
-  width: 300px;
+  border: 1px solid hsl(0, 0%, 20%, 0.3);
+  font-size: 1.5rem;
+  width: 70%;
+  max-width: 300px;
+  box-sizing: border-box;
 }
 
 button[type="submit"] {
-  padding: 10px;
+  width: 100px;
+  height: 100px;
+  padding: 10px 20px;
   border-radius: 5px;
-  border: 1px solid hsl(0, 0%, 20% 0.3);
+  border: 1px solid hsl(0, 0%, 20%, 0.3);
   font-weight: bold;
-  font-size: 2rem;
-  margin: 10px;
+  font-size: 1rem;
+  margin: 10px 0 0 10px;
   background-color: hsl(120, 100%, 50%);
   color: white;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 button[type="submit"]:hover {
@@ -33,8 +40,9 @@ button[type="submit"]:hover {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px hsl(0, 0%, 0%, 0.5);
-  margin: 20px;
-  width: 300px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 500px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -42,42 +50,38 @@ button[type="submit"]:hover {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-top: 0;
-  margin-bottom: 25px;
-}
-
-p {
-  font-size: 1.5rem;
-  margin: 5px 0;
 }
 
 .cityDisplay,
 .tempDisplay {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.274);
-  margin-bottom: 25px;
+  color: white;
+  margin-bottom: 10px;
 }
 
 .humidityDisplay {
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .descDisplay {
   font-style: italic;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .weatherEmoji {
   font-size: 7.5rem;
   margin: 0;
+  text-align: center;
 }
 
 .errorDisplay {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.75);
+  color: rgba(255, 0, 0, 0.75);
 }
