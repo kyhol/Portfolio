@@ -1,0 +1,99 @@
+.projectsContainer {
+  width: 64rem;
+  height: auto; /* Adjust height based on content */
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  justify-content: space-between; /* Space between image and text */
+  align-items: center; /* Vertically align items */
+  gap: 2rem; /* Space between the image and text */
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 1px solid #383737;
+  background: var(--Basic-Onyx, #181818);
+  margin-top: 40px;
+  color: white;
+  position: relative;
+}
+
+.projectImage {
+  width: 40%; /* Adjust width as needed */
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.projectText {
+  width: 50%; /* Adjust width to balance text and image */
+  text-align: left; /* Align text to the left */
+}
+
+.projectText h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.projectText p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.view-code-button {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-code-button:hover {
+  background-color: #0056b3;
+}
+.projectsContainer {
+  position: relative;
+  width: 64rem;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 1px solid #383737;
+  background: var(--Basic-Onyx, #181818);
+  margin-top: 40px;
+  color: white;
+}
+
+.projectLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.view-code-button {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-code-button:hover {
+  background-color: #0056b3;
+}

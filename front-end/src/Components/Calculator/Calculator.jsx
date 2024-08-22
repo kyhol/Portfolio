@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Calculator.css";
+import Button from "../ReturnToPortfolioButton/ReturnToPortfolioButton";
+import "../ReturnToPortfolioButton/ReturnToPortfolioButton.css";
 
 // Basic arithmetic expression evaluator
 const calculateExpression = (expression) => {
@@ -83,6 +85,7 @@ const Calculator = () => {
 
   return (
     <div className="calcContainer">
+      <Button className="returnToPortfolioButton" />
       <div className="calculator">
         <input id="display" value={display} readOnly />
         <div className="keys">

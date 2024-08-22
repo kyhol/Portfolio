@@ -1,5 +1,6 @@
 import React, { useState, useRef, useCallback, useEffect } from "react";
-import "./StopWatch.css"; // Ensure you include your CSS styles here
+import "./StopWatch.css";
+import Button from "../ReturnToPortfolioButton/ReturnToPortfolioButton";
 
 const Stopwatch = () => {
   const [running, setRunning] = useState(false);
@@ -60,19 +61,22 @@ const Stopwatch = () => {
   };
 
   return (
-    <div id="container">
-      <h1 id="myh1">Stopwatch</h1>
-      <div id="display">{displayTime}</div>
-      <div id="controls">
-        <button id="startBtn" onClick={start}>
-          Start
-        </button>
-        <button id="stopBtn" onClick={stop}>
-          Stop
-        </button>
-        <button id="resetBtn" onClick={reset}>
-          Reset
-        </button>
+    <div>
+      <Button className="returnToPortfolioButton" />
+      <div id="container">
+        <h1 id="myh1">Stopwatch</h1>
+        <div id="display">{displayTime}</div>
+        <div id="controls">
+          <button id="startBtn" onClick={start}>
+            Start
+          </button>
+          <button id="stopBtn" onClick={stop}>
+            Stop
+          </button>
+          <button id="resetBtn" onClick={reset}>
+            Reset
+          </button>
+        </div>
       </div>
     </div>
   );

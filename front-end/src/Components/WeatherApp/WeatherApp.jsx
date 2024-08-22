@@ -8,6 +8,7 @@ import {
   FaBolt,
 } from "react-icons/fa";
 import "./WeatherApp.css";
+import Button from "../ReturnToPortfolioButton/ReturnToPortfolioButton";
 
 const apiKey = "208453afc2cb0125c067d36800932307";
 
@@ -64,39 +65,42 @@ const WeatherApp = () => {
   };
 
   return (
-    <div className="weatherApp">
-      <form className="weatherForm" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          className="cityInput"
-          placeholder="Enter City"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        />
-        <button type="submit">Get Weather</button>
-      </form>
+    <div>
+      <Button className="returnToPortfolioButton" />
+      <div className="weatherApp">
+        <form className="weatherForm" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            className="cityInput"
+            placeholder="Enter City"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+          />
+          <button type="submit">Get Weather</button>
+        </form>
 
-      {weatherData && (
-        <div className="card">
-          <h1 className="cityDisplay">{weatherData.name}</h1>
-          <p className="tempDisplay">
-            {(weatherData.main.temp - 273.15).toFixed(1)}°C
-          </p>
-          <p className="humidityDisplay">
-            Humidity: {weatherData.main.humidity}%
-          </p>
-          <p className="descDisplay">{weatherData.weather[0].description}</p>
-          <p className="weatherEmoji">
-            {getWeatherIcon(weatherData.weather[0].id)}
-          </p>
-        </div>
-      )}
+        {weatherData && (
+          <div className="card">
+            <h1 className="cityDisplay">{weatherData.name}</h1>
+            <p className="tempDisplay">
+              {(weatherData.main.temp - 273.15).toFixed(1)}°C
+            </p>
+            <p className="humidityDisplay">
+              Humidity: {weatherData.main.humidity}%
+            </p>
+            <p className="descDisplay">{weatherData.weather[0].description}</p>
+            <p className="weatherEmoji">
+              {getWeatherIcon(weatherData.weather[0].id)}
+            </p>
+          </div>
+        )}
 
-      {error && (
-        <div className="card">
-          <p className="errorDisplay">{error}</p>
-        </div>
-      )}
+        {error && (
+          <div className="card">
+            <p className="errorDisplay">{error}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

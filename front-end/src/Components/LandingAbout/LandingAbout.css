@@ -1,0 +1,29 @@
+.aboutLogoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+/* LandingAbout.css */
+.landing-about-heading h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.aboutLogoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+.smiley-icon {
+  color: #ffa500; /* Yellow-Orange */
+  margin-left: 1rem;
+}
+.landing-about-heading {
+  display: inline-flex;
+  align-items: center; /* Aligns the icon with the text vertically */
+}

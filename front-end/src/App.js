@@ -9,7 +9,10 @@ import Stopwatch from "./Components/StopWatch/StopWatch";
 import TextToSpeech from "./Components/TextToSpeech/TextToSpeech";
 import TodoList from "./Components/ToDoList/ToDoList";
 import WeatherApp from "./Components/WeatherApp/WeatherApp";
-import LandingPage from "./Components/LandingPage/LandingPage"; // Import LandingPage
+import LandingPage from "./Components/LandingPage/LandingPage";
+import Footer from "./Components/Footer/Footer";
+import AboutMe from "./Pages/About";
+import Contact from "./Pages/Contact";
 
 function App() {
   return (
@@ -27,8 +30,11 @@ function App() {
             <Route path="/text-to-speech" element={<TextToSpeech />} />
             <Route path="/todo-list" element={<TodoList />} />
             <Route path="/weather-app" element={<WeatherApp />} />
+            <Route path="/about-me" element={<AboutMe />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
+        <Footer />
       </BrowserRouter>
     </div>
   );

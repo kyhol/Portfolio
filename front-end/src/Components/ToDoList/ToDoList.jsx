@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaCheckSquare, FaTrash, FaClipboardCheck } from "react-icons/fa";
 import "./ToDoList.css";
+import Button from "../ReturnToPortfolioButton/ReturnToPortfolioButton";
 
 const TodoList = () => {
   const [items, setItems] = useState([]);
@@ -36,43 +37,46 @@ const TodoList = () => {
   };
 
   return (
-    <div className="container">
-      <div className="nav">
-        <h2>
-          <FaClipboardCheck /> To-Do List
-        </h2>
-        <div className="user-input">
-          <input
-            type="text"
-            value={inputValue}
-            onChange={handleInputChange}
-            onKeyDown={handleKeyDown}
-          />
-          <button onClick={addItem}>Submit</button>
-        </div>
-      </div>
-      <div className="to-do-items">
-        {items.map((item, index) => (
-          <div key={index} className="item">
-            <div
-              style={{
-                textDecoration: item.completed ? "line-through" : "none",
-              }}
-            >
-              {item.text}
-            </div>
-            <div>
-              <FaCheckSquare
-                className={`check-icon ${item.completed ? "completed" : ""}`}
-                onClick={() => toggleItemCompletion(index)}
-              />
-              <FaTrash
-                className="trash-icon"
-                onClick={() => removeItem(index)}
-              />
-            </div>
+    <div>
+      <Button className="returnToPortfolioButton" />
+      <div className="container">
+        <div className="nav">
+          <h2>
+            <FaClipboardCheck /> To-Do List
+          </h2>
+          <div className="user-input">
+            <input
+              type="text"
+              value={inputValue}
+              onChange={handleInputChange}
+              onKeyDown={handleKeyDown}
+            />
+            <button onClick={addItem}>Submit</button>
           </div>
-        ))}
+        </div>
+        <div className="to-do-items">
+          {items.map((item, index) => (
+            <div key={index} className="item">
+              <div
+                style={{
+                  textDecoration: item.completed ? "line-through" : "none",
+                }}
+              >
+                {item.text}
+              </div>
+              <div>
+                <FaCheckSquare
+                  className={`check-icon ${item.completed ? "completed" : ""}`}
+                  onClick={() => toggleItemCompletion(index)}
+                />
+                <FaTrash
+                  className="trash-icon"
+                  onClick={() => removeItem(index)}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

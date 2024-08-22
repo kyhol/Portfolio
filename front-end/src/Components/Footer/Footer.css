@@ -1,0 +1,113 @@
+.footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 2rem 0 4rem; /* Increased bottom padding */
+  font-family: Arial, sans-serif;
+  position: relative; /* Added for absolute positioning context */
+  height: 12rem;
+  width: 100vw;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 2rem;
+}
+
+.footer-left h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-left p {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer-contact {
+  margin-bottom: 1rem;
+}
+
+.footer-contact p {
+  font-size: 0.9rem;
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.social-link:hover {
+  opacity: 0.7;
+}
+
+.social-link img {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(236, 240, 241, 0.1);
+}
+
+.footer-copyright {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.footer-signature {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.cedarville-cursive-regular {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-right {
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .footer-contact {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-signature {
+    position: static;
+    margin-top: 1rem;
+  }
+}

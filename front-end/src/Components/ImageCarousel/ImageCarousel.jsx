@@ -10,6 +10,7 @@ import img4 from "./Photos/Lam4.jpg";
 import img5 from "./Photos/Lam5.jpg";
 import img6 from "./Photos/Lam6.jpg";
 import img7 from "./Photos/Lam7.jpg";
+import Button from "../ReturnToPortfolioButton/ReturnToPortfolioButton";
 
 const images = [img0, img1, img2, img3, img4, img5, img6, img7];
 
@@ -25,6 +26,7 @@ const Carousel = () => {
 
   return (
     <div>
+      <Button className="returnToPortfolioButton" />
       <div className="container">
         {images.map((src, i) => (
           <div

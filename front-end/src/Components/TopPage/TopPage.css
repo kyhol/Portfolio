@@ -1,0 +1,14 @@
+.topPage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 10rem;
+  width: 1320px;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 50%,
+    rgba(253, 225, 255, 1) 100%
+  );
+}

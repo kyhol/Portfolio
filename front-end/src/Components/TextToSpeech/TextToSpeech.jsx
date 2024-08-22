@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./TextToSpeech.css"; // Ensure you include your CSS styles here
+import "./TextToSpeech.css";
+import Button from "../ReturnToPortfolioButton/ReturnToPortfolioButton";
 
 const TextToSpeech = () => {
   const [voices, setVoices] = useState([]);
@@ -42,24 +43,31 @@ const TextToSpeech = () => {
   };
 
   return (
-    <div className="hero">
-      <h1>
-        Text to Speech <span>Converter</span>
-      </h1>
-      <textarea
-        value={text}
-        onChange={handleTextChange}
-        placeholder="Type what you want to listen to here..."
-      />
-      <div className="row">
-        <select value={selectedVoice} onChange={handleVoiceChange}>
-          {voices.map((voice, i) => (
-            <option key={i} value={i}>
-              {voice.name}
-            </option>
-          ))}
-        </select>
-        <button onClick={handleListenClick}>Listen</button>
+    <div>
+      <Button className="returnToPortfolioButton" />
+      <div className="hero">
+        <h1>
+          Text to Speech <span>Converter</span>
+        </h1>
+        <textarea
+          value={text}
+          onChange={handleTextChange}
+          placeholder="Type what you want to listen to here..."
+        />
+        <div className="row">
+          <select
+            value={selectedVoice}
+            onChange={handleVoiceChange}
+            className="selectVoice"
+          >
+            {voices.map((voice, i) => (
+              <option key={i} value={i}>
+                {voice.name}
+              </option>
+            ))}
+          </select>
+          <button onClick={handleListenClick}>Listen</button>
+        </div>
       </div>
     </div>
   );

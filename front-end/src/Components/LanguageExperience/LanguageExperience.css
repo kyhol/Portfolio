@@ -1,0 +1,97 @@
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Adjust based on the layout you want */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #181818; /* Use the dark background as in the image */
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #383737; /* Border color similar to the image */
+}
+
+.tech-logo {
+  width: 50px; /* Adjust size as needed */
+  height: 50px;
+}
+
+.tech-name {
+  margin-top: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+.tech-logo {
+  font-size: 50px; /* Adjust the font-size as needed */
+  transform: scale(1.2); /* Adjust the scale factor as needed */
+}
+
+.tech-item:nth-child(1) .tech-logo svg {
+  fill: #e34c26; /* HTML5 orange */
+}
+
+.tech-item:nth-child(2) .tech-logo svg {
+  fill: #264de4; /* CSS3 blue */
+}
+
+.tech-item:nth-child(3) .tech-logo svg {
+  fill: #f7df1e; /* JavaScript yellow */
+}
+
+.tech-item:nth-child(4) .tech-logo svg {
+  fill: #61dafb; /* React blue */
+}
+
+.tech-item:nth-child(5) .tech-logo svg {
+  fill: #e76f00; /* Java orange */
+}
+
+.tech-item:nth-child(6) .tech-logo svg {
+  fill: #4b8bbe; /* Python blue */
+}
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #181818;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #383737;
+  position: relative; /* Add this line */
+}
+
+.tech-item:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .tech-stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-stack-grid {
+    grid-template-columns: 1fr;
+  }
+}

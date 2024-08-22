@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import "./SnakeGame.css"; // Ensure this path is correct
+import "./SnakeGame.css";
+import Button from "../ReturnToPortfolioButton/ReturnToPortfolioButton";
 
 const unitSize = 25;
 const gameWidth = 500;
@@ -161,18 +162,21 @@ const SnakeGame = () => {
   };
 
   return (
-    <div id="gameContainer">
-      <canvas
-        ref={canvasRef}
-        id="gameBoard"
-        width={gameWidth}
-        height={gameHeight}
-      />
-      <div id="scoreText">{score}</div>
-      <button id="resetBtn" onClick={resetGame}>
-        Reset
-      </button>
-      {!running && <div className="game-over">Game Over!</div>}
+    <div>
+      <Button className="returnToPortfolioButton" />
+      <div id="gameContainer">
+        <canvas
+          ref={canvasRef}
+          id="gameBoard"
+          width={gameWidth}
+          height={gameHeight}
+        />
+        <div id="scoreText">{score}</div>
+        <button id="resetBtn" onClick={resetGame}>
+          Reset
+        </button>
+        {!running && <div className="game-over">Game Over!</div>}
+      </div>
     </div>
   );
 };
